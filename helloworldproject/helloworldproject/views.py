@@ -2,5 +2,5 @@ from pathlib import Path
 from django.http import HttpResponse
 
 def someview(request):
-    print(path())
+    print(Path())
     return HttpResponse("")
