@@ -3,4 +3,4 @@ from django.http import HttpResponse
 
 def someview(request):
     print(path())
-    return HttpResponse
+    return HttpResponse("")
