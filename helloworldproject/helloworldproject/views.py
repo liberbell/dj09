@@ -6,5 +6,6 @@ def someview(request):
     return HttpResponse("")
 
 def helloworldfunction(request):
+    returned_object = HttpResponse("<h1>Hello World</h1>")
 
-    return HttpResponse("<h1>Hello World</h1>")
+    return returned_object
