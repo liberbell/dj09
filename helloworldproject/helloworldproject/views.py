@@ -7,4 +7,4 @@ def someview(request):
 
 def helloworldfunction(request):
 
-    return HttpResponse("")
+    return HttpResponse("<h1>Hello World</h1>")
