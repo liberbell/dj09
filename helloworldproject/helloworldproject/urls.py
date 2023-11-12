@@ -23,5 +23,5 @@ urlpatterns = [
     path('a/', someview),
     path('helloworld/', helloworldfunction),
     path("helloworldclass/", HelloWorldClass.as_view()),
-    path("", include('helloworldapp.urls')),
+    path("apppp/", include('helloworldapp.urls')),
 ]
