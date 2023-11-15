@@ -1,7 +1,14 @@
 {% extends "base.html" %}
 
+{% block header %}
+  <div class="alert alert-dark" role="alert">
+    List
+  </div>
+{% endblock header %}
+
+
 {% block content %}
-this is list
+
     {% for post in object_list %}
     <ul>
         <li>{{ post.title }}</li>
