@@ -2,10 +2,10 @@
 
 {% block content %}
 this is list
+    {% for post in object_list %}
+    <ul>
+        <li>{{ post.title }}</li>
+        <li>{{ post.memo }}</li>
+    </ul>
+    {% endfor %}
 {% endblock content %}
-{% for post in object_list %}
-<ul>
-    <li>{{ post.title }}</li>
-    <li>{{ post.memo }}</li>
-</ul>
-{% endfor %}
