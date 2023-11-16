@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-CHOICE = ("danger", "high")
+CHOICE = ('danger', 'high')
 
 class TodoModel(models.Model):
     title = models.CharField(max_length=255)
