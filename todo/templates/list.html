@@ -17,16 +17,10 @@
 
     {% for post in object_list %}
     <div class="alert alert-success" role="alert">
-    <ul>
-        <li>{{ post.title }}</li>
-        <a class="btn btn-primary disabled" role="button" aria-disabled="true">Primary link</a>
-        <a class="btn btn-secondary disabled" role="button" aria-disabled="true">Link</a>
-    </ul>
-    </div>
-    <div class="alert alert-success" role="alert">
-    <ul>
-        <li>{{ post.memo }}</li>
-    </ul>
+        <p>{{ post.title }}</p>
+        <a class="btn btn-danger" role="button" aria-disabled="true">Edit todo</a>
+        <a class="btn btn-warning" role="button" aria-disabled="true">Todo detail</a>
+        <a class="btn btn-warning" role="button" aria-disabled="true">Delete todo</a>
     </div>
     {% endfor %}
 </div>
