@@ -1,6 +1,14 @@
 {% extends "base.html" %}
 
+{% block header %}
+  <div class="alert alert-dark" role="alert">
+    Detail
+  </div>
+{% endblock header %}
+
 {% block content %}
-<li>{{ object.title }}</li>
-<li>{{ object.memo }}</li>
+  <div class="alert alert-success" role="alert">
+    <li>{{ object.title }}</li>
+    <li>{{ object.memo }}</li>
+  </div>
 {% endblock content %}
