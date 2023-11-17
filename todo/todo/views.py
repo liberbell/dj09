@@ -14,3 +14,4 @@ class TodoDetail(DetailView):
 class TodoCreate(CreateView):
     template_name = "create.html"
     model = TodoModel
+    
