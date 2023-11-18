@@ -22,3 +22,4 @@ class TodoCreate(CreateView):
 class TodoDelete(DeleteView):
     template_name = "delete.html"
     model = TodoModel
+    success_url = reverse_lazy("list")
