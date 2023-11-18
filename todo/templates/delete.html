@@ -3,6 +3,8 @@
 {% block content %}
 <form action="" method="POST">
     {% csrf_token %}
+    {{ object.title }}
+    {{ object.memo }}
     <input type="submit" value="Delete todo">
 </form>
 {% endblock content %}
