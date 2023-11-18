@@ -14,4 +14,5 @@ class TodoDetail(DetailView):
 class TodoCreate(CreateView):
     template_name = "create.html"
     model = TodoModel
-    
+
+    fields = ["title", "memo", "priority", "due_date"]
