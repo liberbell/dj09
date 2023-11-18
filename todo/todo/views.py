@@ -14,5 +14,6 @@ class TodoDetail(DetailView):
 class TodoCreate(CreateView):
     template_name = "create.html"
     model = TodoModel
+    success_url = reverse_lazy("list")
 
     fields = ["title", "memo", "priority", "due_date"]
