@@ -27,3 +27,4 @@ class TodoDelete(DeleteView):
 class TodoUpdate(UpdateView):
     template_name = "update.html"
     model = TodoModel
+    success_url = reverse_lazy("list")
