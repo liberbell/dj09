@@ -28,3 +28,5 @@ class TodoUpdate(UpdateView):
     template_name = "update.html"
     model = TodoModel
     success_url = reverse_lazy("list")
+
+    fields = ["title", "memo", "priority", "due_date"]
