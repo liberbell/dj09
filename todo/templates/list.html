@@ -18,7 +18,7 @@
 
     {% for post in object_list %}
     <div class="alert alert-{{ post.priority }}" role="alert">
-        <p>Title:{{ post.title }} Due date:{{ post.due_date | date:"F d Y" }}</p>
+        <p>Title:{{ post.title }} Due date:{{ post.due_date | date:"o/n/j" }}</p>
         <a href="{% url "update" pk=post.pk %}" class="btn btn-info" role="button" aria-disabled="true">Edit todo</a>
         <a href="{% url "detail" pk=post.pk %}" class="btn btn-success" role="button" aria-disabled="true">Todo detail</a>
         <a href="{% url "delete" pk=post.pk %}" class="btn btn-primary" role="button" aria-disabled="true">Delete todo</a>
