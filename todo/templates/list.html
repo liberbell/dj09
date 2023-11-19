@@ -18,9 +18,9 @@
     {% for post in object_list %}
     <div class="alert alert-{{ post.priority }}" role="alert">
         <p>{{ post.title }}</p>
-        <a href={% url "update" %} class="btn btn-info" role="button" aria-disabled="true">Edit todo</a>
-        <a href={% url "detail" %} class="btn btn-success" role="button" aria-disabled="true">Todo detail</a>
-        <a href=Delete class="btn btn-primary" role="button" aria-disabled="true">Delete todo</a>
+        <a href="{% url "update" %}" class="btn btn-info" role="button" aria-disabled="true">Edit todo</a>
+        <a href="{% url "detail" %}" class="btn btn-success" role="button" aria-disabled="true">Todo detail</a>
+        <a href="{% url "delete" %}" class="btn btn-primary" role="button" aria-disabled="true">Delete todo</a>
     </div>
     {% endfor %}
 </div>
