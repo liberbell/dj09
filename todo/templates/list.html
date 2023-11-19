@@ -14,7 +14,7 @@
 
 {% block content %}
 <div class="container mt-2">
-    <a href="{% url "create" %}" class="btn btn-info mb-2" role="button" aria-disabled="true">Create todo</a>
+    <a href="{% url "create" %}" class="btn btn-secondary mb-2" role="button" aria-disabled="true">Create todo</a>
 
     {% for post in object_list %}
     <div class="alert alert-{{ post.priority }}" role="alert">
