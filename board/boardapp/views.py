@@ -9,6 +9,9 @@ def signupfunc(request):
         password = request.POST["password"]
         try:
             user = User.objects.create_user(username, "", password)
+            return render(request, "signup.html", {
+                "some": 100
+            })
         except IntegrityError:
             return render(request, "signup.html", {"error": "User already exists"})
     return render(request, "signup.html", {
