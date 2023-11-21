@@ -3,8 +3,8 @@ from django.contrib.auth.models import User
 
 # Create your views here.
 def signupfunc(request):
-    object_list = User.objects.all()
-    print(object_list)
+    object = User.objects.all()
+    print(object.email)
 
     if request.method == "POST":
         print("This is post method.")
