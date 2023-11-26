@@ -30,3 +30,6 @@ def loginfunc(request):
             return render(request, "login.html",
                           {"context": "Not logged in"})
     return render(request, "login.html", {"context": "Get method"})
+
+def listfunc(request):
+    pass
