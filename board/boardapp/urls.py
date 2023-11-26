@@ -6,3 +6,4 @@ urlpatterns = [
     path("login/", loginfunc, name="login"),
     path("list/", listfunc, name="list"),
 ]
+
