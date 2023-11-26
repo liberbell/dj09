@@ -15,9 +15,7 @@ def signupfunc(request):
             })
         except IntegrityError:
             return render(request, "signup.html", {"error": "User already exists"})
-    return render(request, "login.html", {
-        "some": 100
-    })
+    return render(request, "signup.html")
 
 def loginfunc(request):
     if request.method == "POST":
