@@ -31,3 +31,4 @@ def loginfunc(request):
         else:
             return render(request, "signup.html",
                           {"context": "Not logged in"})
+    return render(request, "signup.html", {"context": "Get method"})
