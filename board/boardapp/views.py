@@ -32,4 +32,4 @@ def loginfunc(request):
     return render(request, "login.html", {"context": "Get method"})
 
 def listfunc(request):
-    pass
+    return render(request, "list.html", {})
