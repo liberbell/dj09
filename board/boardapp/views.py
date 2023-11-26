@@ -26,9 +26,9 @@ def loginfunc(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return render(request, "signup.html",
+            return render(request, "login.html",
                           {"context": "Logged in"})
         else:
-            return render(request, "signup.html",
+            return render(request, "login.html",
                           {"context": "Not logged in"})
-    return render(request, "signup.html", {"context": "Get method"})
+    return render(request, "login.html", {"context": "Get method"})
