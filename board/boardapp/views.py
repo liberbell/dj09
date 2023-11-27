@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.db import IntegrityError
 from django.contrib.auth import authenticate, login, logout
 from .models import BoardModel
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def signupfunc(request):
@@ -32,6 +33,7 @@ def loginfunc(request):
                           {"context": "Not logged in"})
     return render(request, "login.html", {"context": "Get method"})
 
+@login_required
 def listfunc(request):
     object_list = BoardModel.objects.all()
     return render(request, "list.html", {
