@@ -42,3 +42,6 @@ def listfunc(request):
 def logoutfunc(request):
     logout(request)
     return redirect("login")
+
+def detailfunc(request):
+    pass
