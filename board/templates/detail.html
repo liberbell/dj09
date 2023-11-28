@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block header %}
+<div class="alert alert-primary" role="alert">
+    <h3>Detail page</h3>
+</div>
+{% endblock header %}
+
+{% block content %}
+{% if user.is_authenticated %}
+    <div class="container">
+        <div class="alert alert-success" role="alert">
+            <p>Title: {{ item.title }}</p>
+            <p>Author: {{ item.author }}</p>
+            <a class="btn btn-primary" role="button" aria-disabled="true">Primary link</a>
+            <a class="btn btn-secondary" role="button" aria-disabled="true">Link</a>
+        </div>
+    </div>
+{% else %}
+<h2>Please Log in</h2>
+{% endif %}
+{% endblock content %}
