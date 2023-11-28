@@ -7,14 +7,18 @@
 {% endblock header %}
 
 {% block content %}
-<div class="container">
-    {% for item in object_list %}
-        <div class="alert alert-success" role="alert">
-            <p>Title: {{ item.title }}</p>
-            <p>Author: {{ item.author }}</p>
-            <a class="btn btn-primary" role="button" aria-disabled="true">Primary link</a>
-            <a class="btn btn-secondary" role="button" aria-disabled="true">Link</a>
-        </div>
-    {% endfor %}
-</div>
+{% if user.is_authenticated %}
+    <div class="container">
+        {% for item in object_list %}
+            <div class="alert alert-success" role="alert">
+                <p>Title: {{ item.title }}</p>
+                <p>Author: {{ item.author }}</p>
+                <a class="btn btn-primary" role="button" aria-disabled="true">Primary link</a>
+                <a class="btn btn-secondary" role="button" aria-disabled="true">Link</a>
+            </div>
+        {% endfor %}
+    </div>
+{% else %}
+<h2>Please Log in</h2>
+{% endif %}
 {% endblock content %}
