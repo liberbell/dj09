@@ -38,3 +38,7 @@ def listfunc(request):
     return render(request, "list.html", {
         "object_list": object_list
     })
+
+def logoutfunc(request):
+    logout(request)
+    return redirect("login")
