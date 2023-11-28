@@ -26,12 +26,11 @@ def loginfunc(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return render(request, "login.html",
-                          {"context": "Logged in"})
+            return redirect("list")
         else:
             return render(request, "login.html",
-                          {"context": "Not logged in"})
-    return render(request, "login.html", {"context": "Get method"})
+                          {})
+    return render(request, "login.html", {})
 
 @login_required
 def listfunc(request):
