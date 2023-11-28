@@ -10,8 +10,9 @@
 {% if user.is_authenticated %}
     <div class="container">
         <div class="alert alert-success" role="alert">
-            <p>Title: {{ item.title }}</p>
-            <p>Author: {{ item.author }}</p>
+            <p>Title: {{ object.title }}</p>
+            <p>Author: {{ object.author }}</p>
+            <p><img src="{{ object.sns_image }}"></p>
             <a class="btn btn-primary" role="button" aria-disabled="true">Primary link</a>
             <a class="btn btn-secondary" role="button" aria-disabled="true">Link</a>
         </div>
