@@ -49,4 +49,4 @@ def detailfunc(request, pk):
     return render(request, "detail.html", {'object': object})
 
 def goodfunc(request, pk):
-    pass
+    object = BoardModel.objects.get(pk=pk)
