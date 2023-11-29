@@ -50,3 +50,5 @@ def detailfunc(request, pk):
 
 def goodfunc(request, pk):
     object = BoardModel.objects.get(pk=pk)
+    object.good += object.good
+    object.save()
