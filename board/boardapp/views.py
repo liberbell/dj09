@@ -45,4 +45,5 @@ def logoutfunc(request):
 
 def detailfunc(request, pk):
     object = get_list_or_404(BoardModel, pk=pk)
+    print(object)
     return render(request, "detail.html", {"object": object})
