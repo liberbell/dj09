@@ -13,7 +13,7 @@
             <p>Title: {{ object.title }}</p>
             <p>Author: {{ object.author }}</p>
             <p><img src="{{ object.sns_image.url }}" width=300></p>
-            <a class="btn btn-primary" role="button" aria-disabled="true">Good!</a>
+            <a href="{% url "good" object.pk %}" class="btn btn-primary" role="button" aria-disabled="true">Good!</a>
             <a class="btn btn-secondary" role="button" aria-disabled="true">read</a>
         </div>
     </div>
