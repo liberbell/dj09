@@ -52,3 +52,4 @@ def goodfunc(request, pk):
     object = BoardModel.objects.get(pk=pk)
     object.good += object.good
     object.save()
+    return redirect("list")
