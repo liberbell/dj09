@@ -47,3 +47,6 @@ def detailfunc(request, pk):
     object = get_object_or_404(BoardModel, pk=pk)
     print(object)
     return render(request, "detail.html", {'object': object})
+
+def goodfunc(request, pk):
+    pass
