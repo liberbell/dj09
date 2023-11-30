@@ -53,3 +53,6 @@ def goodfunc(request, pk):
     object.good += object.good
     object.save()
     return redirect("list")
+
+def readfunc(request, pk):
+    pass
