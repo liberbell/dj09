@@ -55,4 +55,10 @@ def goodfunc(request, pk):
     return redirect("list")
 
 def readfunc(request, pk):
-    pass
+    object = BoardModel.objects.get(pk=pk)
+    username = request.user.get_username()
+    if username in object.read_text:
+        return redirect("list")
+    else:
+        object.read += object.read
+        object.read_text = object.read_text + " " + username
