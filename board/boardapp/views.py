@@ -62,3 +62,5 @@ def readfunc(request, pk):
     else:
         object.read += object.read
         object.read_text = object.read_text + " " + username
+        object.save()
+        return redirect("list")
