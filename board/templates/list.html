@@ -14,7 +14,7 @@
                 <p>Title: <a href="{% url "detail" item.pk %}">{{ item.title }}</a></p>
                 <p>Author: {{ item.author }}</p>
                 <a class="btn btn-primary" disabled role="button" aria-disabled="true">Good {{ item.good }}</a>
-                <a class="btn btn-secondary" role="button" aria-disabled="true">Link</a>
+                <a class="btn btn-secondary" disabled role="button" aria-disabled="true">Already reads: {{ item.read }}</a>
             </div>
         {% endfor %}
         <a href="{% url "logout" %}">Log out</a>
