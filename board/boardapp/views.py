@@ -5,6 +5,7 @@ from django.contrib.auth import authenticate, login, logout
 from .models import BoardModel
 from django.contrib.auth.decorators import login_required
 from django.views.generic import CreateView
+from django.urls import reverse_lazy
 
 # Create your views here.
 def signupfunc(request):
@@ -68,4 +69,6 @@ def readfunc(request, pk):
     
 class BoardCreate(CreateView):
     template_name = "create.html"
-    
+    model = BoardModel
+    fields = ("title", "content", "author", "sns_image")
+    success_url = reverse_lazy("list")
