@@ -4,6 +4,7 @@ from django.db import IntegrityError
 from django.contrib.auth import authenticate, login, logout
 from .models import BoardModel
 from django.contrib.auth.decorators import login_required
+from django.views.generic import CreateView
 
 # Create your views here.
 def signupfunc(request):
@@ -64,3 +65,7 @@ def readfunc(request, pk):
         object.read_text = object.read_text + " " + username
         object.save()
         return redirect("list")
+    
+class BoardCreate(CreateView):
+    template_name = "create.html"
+    
