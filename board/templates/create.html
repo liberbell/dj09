@@ -10,5 +10,7 @@
     <input type="hidden" name="author" value="{{ user.username }}">
     <input type="submit" value="create">
 </form>
+{% else %}
+<h2><a href="login">Please log in</a></h2>
 {% endif %}
 {% endblock content %}
